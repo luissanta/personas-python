@@ -23,7 +23,7 @@ class PersonaTestCase(unittest.TestCase):
 
     def test_anio_nacimiento(self):
             for persona, dat in zip(self.personas, self.data):
-                self.assertEqual(persona.calcular_anio_nacimiento(False), datetime.datetime.now().year - dat[-1])
+                self.assertEqual(persona.calcular_anio_nacimiento(True), datetime.datetime.now().year - dat[-1])
 
     def test_asignacion(self):
         original_data = (self.data_factory.name(), self.data_factory.random_number())
