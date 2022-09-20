@@ -12,7 +12,7 @@ class PersonaTestCase(unittest.TestCase):
         self.data_factory = Faker()
         self.data = []
         self.personas = []
-        for i in range(0, 10):
+        for _ in range(0, 10):
             self.data.append((self.data_factory.name(), self.data_factory.random_number()))
             self.personas.append(Persona(nombre=self.data[-1][0], edad=self.data[-1][-1]))
 
@@ -23,7 +23,7 @@ class PersonaTestCase(unittest.TestCase):
 
     def test_anio_nacimiento(self):
             for persona, dat in zip(self.personas, self.data):
-                self.assertEqual(persona.calcular_anio_nacimiento(True), datetime.datetime.now().year - dat[-1])
+                self.assertEqual(persona.calcular_anio_nacimiento(False), datetime.datetime.now().year - dat[-1])
 
     def test_asignacion(self):
         original_data = (self.data_factory.name(), self.data_factory.random_number())
