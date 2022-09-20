@@ -2,7 +2,7 @@ import unittest
 import datetime
 
 from base import Session
-from  import Persona
+from src.modelo.persona import Persona
 from faker import Faker
 
 
