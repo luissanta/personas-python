@@ -1,6 +1,5 @@
 import unittest
 import datetime
-
 from base import Session
 from src.modelo.persona import Persona
 from faker import Faker
